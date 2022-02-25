@@ -3,7 +3,7 @@ Map of powerlines in Switzerland built with Planetiler and PMTiles
 
 [Demo](https://wipfli.github.io/powerlines-switzerland/)
 
-<img src="demo.png" width=650>
+[<img src="demo.png" width=650>](https://wipfli.github.io/powerlines-switzerland/)
 
 ## Generate `powerlines.pmtiles`
 
