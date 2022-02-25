@@ -34,8 +34,13 @@
 
         var map = new maplibregl.Map({
             container: 'map',
-            style: 'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte.vt/style.json'
+            style: 'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte.vt/style.json',
+            attributionControl: false
         });
+
+        map.addControl(new maplibregl.AttributionControl({
+            customAttribution: 'Swisstopo, OpenStreetMap Contributors'
+        }));
 
         map.on('load', function () {
             map.addSource("powerlines", {
