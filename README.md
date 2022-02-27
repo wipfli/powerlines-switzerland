@@ -84,20 +84,6 @@ public class PowerlinesOverlay implements Profile {
 
 ```
 
-Open `planetiler/planetiler-dist/src/main/java/com/onthegomap/planetiler/Main.java` and add:
-
-```diff
- ...
- import com.onthegomap.planetiler.examples.ToiletsOverlayLowLevelApi;
-+import com.onthegomap.planetiler.examples.PowerlinesOverlay;
- import com.onthegomap.planetiler.mbtiles.Verify;
- ...
-
- "benchmark-longlongmap", LongLongMapBench::main,
-+"powerlines", PowerlinesOverlay::main,
- "verify-mbtiles", Verify::main,
-```
-
 Compile Planetiler:
 
 ```
@@ -107,7 +93,7 @@ Compile Planetiler:
 Run Planetiler:
 
 ```
-java -jar planetiler-dist/target/*with-deps.jar powerlines --force=true --area=switzerland
+java -cp planetiler-dist/target/*with-deps.jar com.onthegomap.planetiler.examples.PowerlinesOverlay --force=true --area=switzerland
 ```
 
 Install PMTiles python package:
